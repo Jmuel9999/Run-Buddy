@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body
+    /* This is how we comment in CSS */
+    {
+        color: #39a6b2;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+header
+    /*apply style to <header> It WAS 20, not 4 px, but did not seem to work properly for the width
+    I changed from the default padding code and used this and tweaked things. From left to right, TOP  RIGHT  BOTTOM  LEFT */
+    {
+        padding: 3px 15px 20px 25px;
+        background-color: #39a6b2
+    }
+    /*"inline" moves the link options into blue header bar*/
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0px;
+    display: inline;
+            }
+    /*Removes the underline and changes the color*/        
+header a {
+    text-decoration: none;
+    color: #fce138;
+}
+/*Moves <nav> element to the right side*/
+header nav {
+    float: right;
+    /*"7px" is top and bottom, "0px" is left and right*/
+    margin: 7px 0;
+}
+/*Displays the "list" that was going top to bottom to left to right*/
+header nav ul li {
+    display: inline;
+}
+/*Made bigger gap in between choices, made font a lighter color, made font bigger*/
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
