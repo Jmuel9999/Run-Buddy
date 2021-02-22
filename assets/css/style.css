@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body
     /* This is how we comment in CSS */
@@ -43,5 +44,27 @@ header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+}
+/*Added the solid yellow footer bar  --  40px is top and bottom, 35px is left and right sides for padding*/
+footer {
+    background: #fce138;
+    width: 100%;
+    padding: 40px 35px;
+}
+footer h2 {
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
+/*Sends text to the right side of the webpage and centers it*/
+footer div {
+    float: right;
+    line-height: 1.5;/*"line-height" property assigns how much vertical space between lines*/
+    text-align: right;
+}
+/*Simply changed the color of "Read Our Privacy Policy*/
+footer a {
+    color: #024e76;
 }
 
