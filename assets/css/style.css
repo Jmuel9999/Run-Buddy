@@ -67,4 +67,9 @@ footer div {
 footer a {
     color: #024e76;
 }
+/*End of Mod 1 Less 2*/
 
+/*padding spreads out the elements in the hero section nicely, CSS box model*/
+section {
+    padding: 60px;
+}
