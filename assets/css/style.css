@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body
     /* This is how we comment in CSS */
     {
         color: #39a6b2;
         font-family: Helvetica, Arial, sans-serif;
     }
+
 header
     /*apply style to <header> It WAS 20, not 4 px, but did not seem to work properly for the width
     I changed from the default padding code and used this and tweaked things. From left to right, TOP  RIGHT  BOTTOM  LEFT */
@@ -16,6 +18,7 @@ header
         padding: 3px 15px 20px 25px;
         background-color: #39a6b2
     }
+
     /*"inline" moves the link options into blue header bar*/
 header h1 {
     font-weight: bold;
@@ -24,49 +27,58 @@ header h1 {
     margin: 0px;
     display: inline;
             }
+
     /*Removes the underline and changes the color*/        
 header a {
     text-decoration: none;
     color: #fce138;
 }
+
 /*Moves <nav> element to the right side*/
 header nav {
     float: right;
     /*"7px" is top and bottom, "0px" is left and right*/
     margin: 7px 0;
 }
+
 /*Displays the "list" that was going top to bottom to left to right*/
 header nav ul li {
     display: inline;
 }
+
 /*Made bigger gap in between choices, made font a lighter color, made font bigger*/
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
 }
+
 /*Added the solid yellow footer bar  --  40px is top and bottom, 35px is left and right sides for padding*/
 footer {
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
 }
+
 footer h2 {
     display: inline;
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
+
 /*Sends text to the right side of the webpage and centers it*/
 footer div {
     float: right;
     line-height: 1.5;/*"line-height" property assigns how much vertical space between lines*/
     text-align: right;
 }
+
 /*Simply changed the color of "Read Our Privacy Policy*/
 footer a {
     color: #024e76;
 }
+
 /*End of Mod 1 Less 2*/
 
 /*padding spreads out the elements in the hero section nicely, CSS box model*/
@@ -82,6 +94,7 @@ section {
     background-position: center;
     position: relative; /*this keeps the yellow box within the hero space, and not the WHOLE body area*/
 }
+
 .hero-form { 
     background-color: #fce138;
     padding: 20px;
@@ -99,9 +112,11 @@ hero-form h3 {
     font-size: 24px;
     margin: 0;
 }
+
 .hero-form p {
     margin: 5px 0 15px 0;/*this allowed me to align the "fill out this form" sentence properly*/
 }
+
 .form-input {/*spaces the 3 text fields out nicely and brings things together*/
     border: 1px solid #024e76;
     display: block;
@@ -113,9 +128,11 @@ hero-form h3 {
     margin-bottom: 15px;
     padding-left: 10px;/*moving placeholders into their text field to make it look nice and indented*/
 }
+
 .hero-form label {
     margin: 0 5px;
 }
+
 .hero-form button {/*makes the "get running" button bigger and nicer looking*/
     color:#fce138;
     background-color: #024e76;
@@ -128,32 +145,111 @@ hero-form h3 {
 .intro {
     text-align: center;
 }
-.intro h2 {
-    font-size: 55px;
-    color:#024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid; /*again, we can combine the color and border, think FASTER!*/
-    border-color:#fce138;
-    display: inline-block;
-}
+
 .intro p {/*styled all of the 'what we do' paragraph*/
     line-height: 1.7;
     color: #39a6b2;
     width: 80%;
     font-size: 20px;
-    margin: 0 auto;/*centers the paragraph, ONLY WORKS FOR HORIZONTAL CENTERING*/
+    margin: 0 auto;/*centers the paragraph (and most non text content), ONLY WORKS FOR HORIZONTAL CENTERING*/
 }
+
 .steps {
     text-align: center;
     background: #fce138;
 }
-.steps h2 {
+
+.section-title { /*this class was specified for combining the old code with .intro h2 and .steps h2 because they were so similar
+                    REMEMBER the DRY rule, DON'T REAPEAT YOURSELF*/
     font-size: 55px;
     color: #024e76;
     margin-bottom: 35px;
     padding: 0 100px 20px 100px;
-    border-bottom: 3px solid #39a6b2;
     display: inline-block;
+    border-bottom: 3px solid;
+}
+
+.primary-border {/*used with h2 in What We Do section*/
+    border-color: #fce138;
+}
+
+.secondary-border {
+    border-color: #39a6b2;
+}
+
+.steps div {/*this is for the SVG images, this "steps div" in particular separates the various <div> sections for the 1-4 steps properly*/
+    margin-bottom: 80px;
+ }
+
+.steps img {
+    width: 15%;
+    margin: 10px 0;
+}
+
+.steps h3 {
+    color: #024e76;
+    font-size: 46px;
+    margin-top: 10px;
+}  
+
+.steps p {
+    color: #39a6b2;
+    font-size: 23px;
+}
+
+.steps span {
+    font-size: 38px;
+}
+
+.trainers { /*centers image, headers and paragraph for the entire <section>*/
+    text-align: center;
+}
+
+.trainer {/*creates border around all text and image with padding (margin) and colors it*/
+    width: 900px;/*did this so the text did not take up the entirety of the page*/
+    margin: 0 auto 30px auto;/*top, right, bottom, left. "auto" tells browser to take
+                             space that is unused and evenly distribute it on those sides*/
+    background: #024e76;
+    color: #fce138;
+    overflow: auto;/*Don't really understand this, but this element tell the <article> section
+                    that it HAS content inside it, and that it needs to look for it and account
+                    for the floating*/
+}
+
+.trainer img {/*adjusts image to appropriate size for mock up, and left aligns and centers it*/
+    width: 35%;
+    float: left;
+}
+
+.trainer-bio {/*takes the bio text and centers it to the right within the <div> child of article*/
+    padding: 35px;
+    float: left;
+    width: 65%;
+}
+
+.text-left {/*a utility class that left-align's the paragraph for trainers, in this
+            case, for Arron Stephens*/
+    text-align: left;
+}
+
+.text-right {/*same thing as above, except for the middle trainer to RIGHT align the text*/
+    text-align: right;
+}
+
+.trainer-bio h3 {/*corrects the header name and the rest of the text*/
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.trainer-bio h4 {/* makes h4 (speed/str) properly line up higher than paragraph
+                text, and makes it less BOLD*/
+    font-weight: lighter;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.trainer-bio p {/*properly sizes font of paragraph and line height in between lines*/
+    font-size: 17px;
+    line-height: 1.3;
 }
 
