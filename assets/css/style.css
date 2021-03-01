@@ -300,3 +300,20 @@ hero-form h3 {
 }
 
 /* REACH OUT STYLES END */
+
+/* homepage hero */
+
+.hero {
+    margin: 20px;
+    background-color: white;
+    font-size: 20px;
+    color: blue;
+}
+
+/* SECONDARY PAGE HERO */
+.hero-secondary {
+    margin: 20px;
+    background-color: black;
+    font-size: 20px;
+    color: red;
+}
