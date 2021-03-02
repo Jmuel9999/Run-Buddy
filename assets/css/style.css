@@ -86,7 +86,8 @@ section {
     padding: 60px;
 }
 
-/*hero style start*/
+/*HERO STYLE START*/
+
 .hero {
     background-image: url("../images/hero-bg.jpg");
     height: 600px;
@@ -108,7 +109,7 @@ section {
     right: 140px;
 }
 
-hero-form h3 {
+.hero-form h3 {
     font-size: 24px;
     margin: 0;
 }
