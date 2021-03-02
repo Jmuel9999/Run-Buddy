@@ -43,16 +43,19 @@ header nav {
     margin: 7px 0;
 }
 
-/*Displays the "list" that was going top to bottom to left to right*/
-header nav ul li {
-    display: inline;
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*all of this makes the resizing of the window easier and cleaner for children to stack*/
+    align-items: center;/*vertically centers the content (children)*/
+    list-style: none;/*puts children in a list when resizing*/
 }
 
 /*Made bigger gap in between choices, made font a lighter color, made font bigger*/
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.55vw;/*viewport width - telling browser that font size should be roughly 1.55% of window's overall width*/
 }
 
 /*Added the solid yellow footer bar  --  40px is top and bottom, 35px is left and right sides for padding*/
