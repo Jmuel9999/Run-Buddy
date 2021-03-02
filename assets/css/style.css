@@ -16,7 +16,11 @@ header
     I changed from the default padding code and used this and tweaked things. From left to right, TOP  RIGHT  BOTTOM  LEFT */
     {
         padding: 3px 15px 20px 25px;
-        background-color: #39a6b2
+        background-color: #39a6b2;
+        display: flex;/*puts the parent element <header> and children <h1> and <av> in a row, and evenly spaced apart*/
+                        /*to change "row" to "column" use flex-direction: column;*/
+        justify-content: space-between;/*calculates the unused space of the header and spreads child and parent evenly*/
+        flex-wrap: wrap;/*allows for header children to stack when window gets smaller*/
     }
 
     /*"inline" moves the link options into blue header bar*/
@@ -25,7 +29,6 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0px;
-    display: inline;
             }
 
     /*Removes the underline and changes the color*/        
@@ -36,7 +39,6 @@ header a {
 
 /*Moves <nav> element to the right side*/
 header nav {
-    float: right;
     /*"7px" is top and bottom, "0px" is left and right*/
     margin: 7px 0;
 }
