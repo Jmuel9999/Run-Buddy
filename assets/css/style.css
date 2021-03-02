@@ -60,13 +60,15 @@ header nav ul li a {
 
 /*Added the solid yellow footer bar  --  40px is top and bottom, 35px is left and right sides for padding*/
 footer {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
 }
 
 footer h2 {
-    display: inline;
     color: #024e76;
     font-size: 30px;
     margin: 0;
@@ -74,7 +76,6 @@ footer h2 {
 
 /*Sends text to the right side of the webpage and centers it*/
 footer div {
-    float: right;
     line-height: 1.5;/*"line-height" property assigns how much vertical space between lines*/
     text-align: right;
 }
@@ -95,23 +96,22 @@ section {
 
 .hero {
     background-image: url("../images/hero-bg.jpg");
-    height: 600px;
     background-size: cover;
     background-position: center;
-    position: relative; /*this keeps the yellow box within the hero space, and not the WHOLE body area*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-form { 
     background-color: #fce138;
     padding: 20px;
-    width: 500px;
     color: #024e76;
     border-style: solid; /*can combine these three like this: border: solid 3px #024e76;*/
     border-width: 3px;
     border-color: #024e76;
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
+    width: 40%;
+    margin: 3.5%;
 }
 
 .hero-form h3 {
@@ -146,6 +146,22 @@ section {
     padding: 10px 20px;
     font-size: 16px;
 }
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
+}
+
 /* hero style end */
 
 .intro {
