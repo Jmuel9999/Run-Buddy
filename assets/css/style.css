@@ -240,7 +240,7 @@ section {
     justify-content: space-between;
 }
 
-.trainers { /*centers image, headers and paragraph for the entire <section>*/
+.trainers { 
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -300,21 +300,23 @@ section {
 
 .contact-info iframe {/*we specify each iframe because there can be multiple on a webpage.*/
         /*"iframe" is the only name that worked, .contact-info iframe did not. WHY?*/    
-    width: 400px;
     height: 400px;
 }
 
 .contact-info div {
-    width: 410px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 30px 0 0 60px;
+    /*check on this*/
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     color: white;
 }
 
-.addressdiv {
-    display: block;
+.contact-info > * {/*the > symbols mean's looking specifically for direct children of the element listed first*/
+    flex: 1;
+    margin: 15px;
 }
 
 .contact-info h3 {
@@ -325,8 +327,29 @@ section {
 .contact-info p, .contact-info address { /*you can make 2 classes in the same line...apparently?*/
     margin: 20px 0;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
+}
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    background: #fce138;
+    color: #024e76;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
 }
 
 .contact-info a {
