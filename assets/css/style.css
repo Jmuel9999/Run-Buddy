@@ -241,29 +241,27 @@ section {
 }
 
 .trainers { /*centers image, headers and paragraph for the entire <section>*/
-    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .trainer {/*creates border around all text and image with padding (margin) and colors it*/
-    width: 900px;/*did this so the text did not take up the entirety of the page*/
-    margin: 0 auto 30px auto;/*top, right, bottom, left. "auto" tells browser to take
-                             space that is unused and evenly distribute it on those sides*/
+    margin: 20px;
     background: #024e76;
     color: #fce138;
-    overflow: auto;/*Don't really understand this, but this element tell the <article> section
-                    that it HAS content inside it, and that it needs to look for it and account
-                    for the floating*/
+    flex: 1;/*If all flexbox children have a value of flex: 1, that means they'll share any extra space evenly.*/
 }
 
 .trainer img {/*adjusts image to appropriate size for mock up, and left aligns and centers it*/
-    width: 35%;
-    float: left;
+    width: 100%;
 }
 
 .trainer-bio {/*takes the bio text and centers it to the right within the <div> child of article*/
-    padding: 35px;
-    float: left;
-    width: 65%;
+    padding: 25px;
+    line-height: 1.3;
 }
 
 .text-left {/*a utility class that left-align's the paragraph for trainers, in this
@@ -276,20 +274,18 @@ section {
 }
 
 .trainer-bio h3 {/*corrects the header name and the rest of the text*/
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 28px;
 }
 
 .trainer-bio h4 {/* makes h4 (speed/str) properly line up higher than paragraph
                 text, and makes it less BOLD*/
     font-weight: lighter;
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .trainer-bio p {/*properly sizes font of paragraph and line height in between lines*/
     font-size: 17px;
-    line-height: 1.3;
 }
 
 /* REACH OUT STYLES START */
