@@ -15,12 +15,22 @@ header
     /*apply style to <header> It WAS 20, not 4 px, but did not seem to work properly for the width
     I changed from the default padding code and used this and tweaked things. From left to right, TOP  RIGHT  BOTTOM  LEFT */
     {
-        padding: 3px 15px 20px 25px;
+        padding: 3px 15px 25px 25px;
         background-color: #39a6b2;
         display: flex;/*puts the parent element <header> and children <h1> and <av> in a row, and evenly spaced apart*/
                         /*to change "row" to "column" use flex-direction: column;*/
         justify-content: space-between;/*calculates the unused space of the header and spreads child and parent evenly*/
         flex-wrap: wrap;/*allows for header children to stack when window gets smaller*/
+        position: sticky;
+        top: 0;
+        position: -webkit-sticky;/*these last 3 declarations are for Safari browser, because it needed a vendor prefix to work properly*/
+        position: sticky;             /*Always put prefixed version before finalized version*/
+        top: 0;
+        background-image: url("../images/hero-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: 80%;
     }
 
     /*"inline" moves the link options into blue header bar*/
@@ -29,6 +39,7 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             }
 
     /*Removes the underline and changes the color*/        
@@ -56,6 +67,14 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;/*viewport width - telling browser that font size should be roughly 1.55% of window's overall width*/
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {/*puts yellow border around when cursor is hovered over nav items*/
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 /*Added the solid yellow footer bar  --  40px is top and bottom, 35px is left and right sides for padding*/
@@ -102,6 +121,8 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
     
 }
 
@@ -114,6 +135,8 @@ section {
     border-color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(252, 225, 56, 0.8);
+    border-radius: 15px;/*trims and rounds borders of boxes*/
 }
 
 .hero-form h3 {
@@ -135,6 +158,13 @@ section {
     height: 30px;
     margin-bottom: 15px;
     padding-left: 10px;/*moving placeholders into their text field to make it look nice and indented*/
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .75);/*puts white border box around text fields when selecting them to type in*/
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -147,6 +177,11 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-form button:hover {/*light-blue "get running" button when hovered over*/
+    background-color: #39a6b2;
 }
 
 .hero-cta {
@@ -162,6 +197,7 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* hero style end */
@@ -234,11 +270,15 @@ section {
 .step {
     margin: 50px auto;
     padding-bottom: 50px;
-    width: 80%;    border-bottom: 1px solid #39a6b2;
+    width: 80% ;    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.step:not(:last-child) {
+    border-bottom: none;
 }
 
 .trainers { 
@@ -341,6 +381,13 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none
 }
 
 .contact-form button {
@@ -351,6 +398,12 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {/*light blue when hovered over "submit" button*/
+    color: #fce138;
+    background: #39a6b2;
 }
 
 .contact-info a {
@@ -388,6 +441,7 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative; /*gets rid of stickiness for the smaller sizes*/
     }
 
     header h1 {
@@ -493,3 +547,4 @@ section {
         order: 3;
     }
 }
+
